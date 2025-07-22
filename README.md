@@ -1,1 +1,1 @@
-# mpc-agent
+# mcp-agent
