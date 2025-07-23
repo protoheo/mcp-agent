@@ -1,4 +1,5 @@
 import json
+import os
 from typing import TypedDict
 
 import dotenv
@@ -155,4 +156,5 @@ def main():
 
 if __name__ == "__main__":
     init()
+    main()
     main()
