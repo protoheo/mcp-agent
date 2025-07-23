@@ -254,7 +254,7 @@ class Qwen8BChatModel(BaseChatModel):
             tool_descriptions.append(tool_desc)
 
         return f"""Available Functions:
-    {chr(10).join(tool_descriptions)}
+    {'\n'.join(tool_descriptions)}
 
     When you need to call a function, use this format:
     <function_call>
