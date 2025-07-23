@@ -146,7 +146,6 @@ def main():
                             # If JSON decoding fails, print the content directly
                             print(last_msg.content)
 
-                        print(last_msg.content)
                     elif hasattr(last_msg, "tool_calls") and last_msg.tool_calls:
                         print(f"Tool calls: {last_msg.tool_calls}")
                     else:
