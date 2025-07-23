@@ -75,11 +75,9 @@ graph = builder.compile()
 
 # 🔹 테스트
 def run_chat(prompt):
-    print(f"User: {prompt}")
+    # print(f"User: {prompt}")
     state = {"messages": [{"role": "user", "content": prompt}]}
     result = graph.invoke(state)
-    print("Assistant:", result["messages"][-1]["content"])
-
-# ✅ 예제 실행
-run_chat("2 + 3")
-run_chat("what is the capital of France?")
+    # print("Assistant:", result["messages"][-1]["content"])
+    ret = {"Assistant:", result["messages"][-1]["content"]}
+    return ret
