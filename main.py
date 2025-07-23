@@ -26,7 +26,8 @@ def init():
     global sllm, llm, tool_node, llm_system_prompt
     with open("prompts/system/sllm_v2.md", "r") as f:
         sllm_system_prompt = f.read()
-    with open("/home/kangnam/projects/mpc-agent/prompts/system/llm.md", "r") as f:
+    llm_path = os.path.join(os.path.dirname(__file__), "prompts", "system", "llm.md")
+    with open(llm_path, "r") as f:
         llm_system_prompt = f.read()
 
     crypto_price_finder = CryptoPriceTool()
