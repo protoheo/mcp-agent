@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 import uvicorn
+from core.main_body import agent_body
 
-from core.main_body import run_chat
+model_manager, agent_model = agent_body()
 
 app = FastAPI(
     title="Agentic AI API",
@@ -13,7 +14,7 @@ app = FastAPI(
 
 @app.post("/llm")
 async def chat_transfer(input_msg: str):
-    output = run_chat(input_msg)
+    output = agent_model.run_chat(input_msg)
     return output
 
 
