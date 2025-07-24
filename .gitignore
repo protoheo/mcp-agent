@@ -1,3 +1,5 @@
+/configs/config.py
+/configs/config_prompt.py
 __pycache__
 .venv
 playground*
