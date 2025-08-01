@@ -1,5 +1,5 @@
 from libs.model_manager import ModelManager
-from structs.agent_struct import AgenticModel
+from agents.lightweight_agent import AgenticModel
 
 
 def agent_body():

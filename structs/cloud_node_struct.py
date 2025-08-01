@@ -14,9 +14,11 @@ class CloudLLMNode(Runnable):
 
         input_message = state["messages"][-1]["content"]
         print("CloudLLMNode  --->", input_message)
+
         self.counter += 1
         last_message = f'{input_message}_{str(self.counter).zfill(2)}회 호출'
         wrapped_msg = self.model_manager.msg_wrapper('assistant', last_message)
+
         state["messages"].append(wrapped_msg)
         print("CloudLLMNode  --->", last_message)
 

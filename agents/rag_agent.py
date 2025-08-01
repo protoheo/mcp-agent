@@ -1,3 +1,4 @@
+from PIL.Image import Image
 from langgraph.graph import StateGraph, END
 
 from structs.rounter_struct import MainRouter
@@ -5,7 +6,7 @@ from structs.sllm_node_struct import LLMNode
 from structs.cloud_node_struct import CloudLLMNode
 
 
-class AgenticModel:
+class RAGAgent:
     def __init__(self, model_manager):
         self.model_manager = model_manager
 
@@ -14,6 +15,10 @@ class AgenticModel:
 
         self.do_build()
         self.messages = []
+
+    def display_graph(self):
+        pass
+        # self.graph.get_graph(xray=True).draw_mermaid_png()
 
     def do_build(self):
         self.builder.add_node("Router", MainRouter(self.model_manager))
