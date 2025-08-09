@@ -1,10 +1,9 @@
 from libs.model_manager import ModelManager
-from structs.agent_struct import AgenticModel
+from agents.lightweight_agent import AgenticModel
 
 
 if __name__ == '__main__':
     mm = ModelManager()
-    # mm = None
     agm = AgenticModel(mm)
 
     while True:
